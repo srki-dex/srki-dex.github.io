@@ -1,0 +1,19 @@
+#btn-back-to-top {
+  margin: 0;
+  padding: 0;
+  display: none;
+  position: fixed;
+  width: 30px;
+  height: 40px;
+  bottom: 40px;
+  right: 20px;
+  background-color: red;
+  color: white;
+  z-index: 99;
+  text-align: center;
+}
+
+#btn-back-to-top i {
+  color: white;
+}
+

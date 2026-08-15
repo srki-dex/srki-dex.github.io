@@ -1,0 +1,128 @@
+.bs-icon {
+  --bs-icon-size: .75rem;
+  display: flex;
+  flex-shrink: 0;
+  justify-content: center;
+  align-items: center;
+  font-size: var(--bs-icon-size);
+  width: calc(var(--bs-icon-size) * 2);
+  height: calc(var(--bs-icon-size) * 2);
+  color: var(--bs-primary);
+}
+
+.bs-icon-xs {
+  --bs-icon-size: 1rem;
+  width: calc(var(--bs-icon-size) * 1.5);
+  height: calc(var(--bs-icon-size) * 1.5);
+}
+
+.bs-icon-sm {
+  --bs-icon-size: 1rem;
+}
+
+.bs-icon-md {
+  --bs-icon-size: 1.5rem;
+}
+
+.bs-icon-lg {
+  --bs-icon-size: 2rem;
+}
+
+.bs-icon-xl {
+  --bs-icon-size: 2.5rem;
+}
+
+.bs-icon.bs-icon-primary {
+  color: var(--bs-white);
+  background: var(--bs-primary);
+}
+
+.bs-icon.bs-icon-primary-light {
+  color: var(--bs-primary);
+  background: rgba(var(--bs-primary-rgb), .2);
+}
+
+.bs-icon.bs-icon-semi-white {
+  color: var(--bs-primary);
+  background: rgba(255, 255, 255, .5);
+}
+
+.bs-icon.bs-icon-rounded {
+  border-radius: .5rem;
+}
+
+.bs-icon.bs-icon-circle {
+  border-radius: 50%;
+}
+
+ul {
+  list-style: none;
+  display: block;
+  text-align: left;
+  padding: 0;
+  margin: 0;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  height: 40px;
+}
+
+li {
+  float: left;
+  text-align: center;
+  padding: 0;
+  width: 25%;
+  color: rgb(255,255,255);
+}
+
+img {
+  border-radius: 5%;
+  margin-top: 9px;
+  width: 277px;
+  text-align: center;
+  margin-left: 12px;
+}
+
+a {
+  width: auto;
+}
+
+.header-top {
+  margin: 0 auto!important;
+  width: 360px!important;
+  background: rgba(0,0,0,0.26);
+  flex: none;
+}
+
+span {
+}
+
+#navcol-4 {
+  display: flex!important;
+}
+
+img {
+  width: 100%;
+  margin-left: 0;
+}
+
+#alati {
+  filter: invert(100%);
+}
+
+#o_meni {
+  background: url("../../assets/img/gromipakao.gif") center / cover no-repeat;
+  filter: invert(100%);
+  color: rgb(255,255,255);
+  padding-top: 0px;
+  margin-top: 10px;
+}
+
+#usluge {
+  filter: invert(100%);
+}
+
+#radovi {
+  filter: invert(100%);
+  margin-top: 5px;
+}
+

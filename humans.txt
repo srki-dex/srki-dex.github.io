@@ -1,0 +1,44 @@
+/* TEAM */
+Developer & Designer: Srđan Cvetković (Srki Dex)
+Location: Belgrade, Serbia
+Role: Freelance Web Designer, WordPress Developer
+Website: https://srki-dex.github.io/
+GitHub: https://github.com/srki-dex
+Instagram: https://instagram.com/srkidex/
+linkedin: https://linkedin.com/in/srki-dex
+
+/* SITE */
+Site Name: Srki Dex Portfolio
+Description: Portfolio website showcasing web design, WordPress development, SEO optimization and print design
+Language: English / Serbian
+Standards: HTML5, CSS3
+Accessibility: Basic accessibility practices applied
+Performance: Optimized for fast loading and responsive design
+
+/* TECHNOLOGY STACK */
+- HTML5
+- CSS3
+- Bootstrap
+- WordPress (for client projects)
+- Visual Studio Code
+- GitHub Pages
+
+/* SERVICES */
+- Web Design
+- WordPress Development
+- SEO Optimization
+- Print Design
+- Branding
+
+/* THANKS */
+- Open-source community
+- Design inspiration from modern web trends
+- Clients and collaborators
+
+/* CONTACT */
+Instagram: https://instagram.com/srkidex/
+GitHub: https://github.com/srki-dex
+GitHub: https://linkedin.com/in/srki-dex
+
+/* NOTE */
+This site is handcrafted with attention to performance, usability, and clean design.
