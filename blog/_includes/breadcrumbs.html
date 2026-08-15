@@ -1,0 +1,44 @@
+<nav aria-label="Breadcrumb">
+    <ul class="breadcrumb">
+
+        <!-- Home -->
+        <li class="breadcrumb-item">
+            <a href="{{ site.url }}">Srki Dex</a>
+        </li>
+
+        {% if page.layout == 'post' %}
+
+            <!-- Blog -->
+            <li class="breadcrumb-item">
+                <a href="{{ '/' | relative_url }}">Blog</a>
+            </li>
+
+            <!-- Category -->
+            {% if page.categories %}
+                <li class="breadcrumb-item">
+                    <a href="{{ '/' | append: page.categories[0] | append: '/' | relative_url }}">
+                        {{ page.categories[0] }}
+                    </a>
+                </li>
+            {% endif %}
+
+            <!-- Post -->
+            <li class="breadcrumb-item active" aria-current="page">
+                <a href="{{ page.url | relative_url }}">
+                    {{ page.title }}
+                </a>
+            </li>
+
+        {% elsif page.url != '/' %}
+
+            <!-- Other pages -->
+            <li class="breadcrumb-item active" aria-current="page">
+                <a href="{{ page.url | relative_url }}">
+                    {{ page.title }}
+                </a>
+            </li>
+
+        {% endif %}
+
+    </ul>
+</nav>

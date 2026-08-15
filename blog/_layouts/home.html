@@ -1,0 +1,416 @@
+---
+layout: default
+---
+
+<div class="container">
+
+  <section class="hero">
+    <h1>Web dizajn, SEO i projekti.</h1>
+
+    <p class="post-description">
+      Dobrodošli u moj blog o web dizajnu, SEO optimizaciji, programiranju i projektima.
+    </p>
+  </section>
+
+
+  {% if page.blog_index %}
+
+  <!-- Blog Search -->
+
+  <section
+    class="blog-search"
+    aria-label="Pretraga bloga"
+  >
+
+    <label for="blog-search">
+      Pretraži blog naslove i opise
+    </label>
+
+    <input
+      type="search"
+      id="blog-search"
+      placeholder="Pretraži članke..."
+      autocomplete="off"
+      aria-controls="search-results"
+    >
+
+    <div
+      id="search-results"
+      class="search-results"
+      aria-live="polite"
+    ></div>
+
+  </section>
+
+  {% endif %}
+
+
+  <section
+    class="section"
+    aria-labelledby="latest-heading"
+  >
+
+    <div class="post-grid">
+
+      {% for post in paginator.posts %}
+
+        <article class="card blog-card">
+
+          {% if post.image %}
+
+          <div class="blog-post-image">
+
+            <img
+              src="{{ post.image | relative_url }}"
+              alt="{{ post.title | escape }}"
+              class="img-fluid"
+              loading="lazy"
+            >
+
+          </div>
+
+          {% endif %}
+
+
+          <h3>
+
+            <a href="{{ post.url | relative_url }}">
+              {{ post.title }}
+            </a>
+
+          </h3>
+
+
+          <p>
+            {{ post.description
+              | default: post.excerpt
+              | strip_html
+              | truncate: 180
+            }}
+          </p>
+
+        </article>
+
+
+      {% else %}
+
+        <p>
+          Prvi tekst uskoro.
+        </p>
+
+      {% endfor %}
+
+    </div>
+
+
+    <!-- Pagination -->
+
+    {% if paginator.total_pages > 1 %}
+
+    <nav
+      class="pagination"
+      aria-label="Navigacija bloga"
+      style="margin: 10px;"
+    >
+
+      <ul class="pagination-list">
+
+
+        <!-- Previous -->
+
+        {% if paginator.previous_page %}
+
+        <li class="pagination-item">
+
+          <a
+            href="{{ paginator.previous_page_path | relative_url }}"
+            rel="prev"
+            aria-label="Prethodna stranica"
+          >
+            &laquo; Prethodna
+          </a>
+
+        </li>
+
+        {% endif %}
+
+
+        <!-- Page Numbers -->
+
+        {% for page in (1..paginator.total_pages) %}
+
+          {% if page == paginator.page %}
+
+          <li
+            class="pagination-item active"
+            aria-current="page"
+          >
+            <span>{{ page }}</span>
+          </li>
+
+
+          {% elsif page == 1 %}
+
+          <li class="pagination-item">
+
+            <a href="{{ '/' | relative_url }}">
+              {{ page }}
+            </a>
+
+          </li>
+
+
+          {% else %}
+
+          <li class="pagination-item">
+
+            <a
+              href="{{ site.paginate_path
+                | replace: ':num', page
+                | relative_url }}"
+            >
+              {{ page }}
+            </a>
+
+          </li>
+
+          {% endif %}
+
+        {% endfor %}
+
+
+        <!-- Next -->
+
+        {% if paginator.next_page %}
+
+        <li class="pagination-item">
+
+          <a
+            href="{{ paginator.next_page_path | relative_url }}"
+            rel="next"
+            aria-label="Sledeća stranica"
+          >
+            Sledeća &raquo;
+          </a>
+
+        </li>
+
+        {% endif %}
+
+
+      </ul>
+
+    </nav>
+
+    {% endif %}
+
+  </section>
+
+</div>
+
+
+{% if page.blog_index %}
+
+<!-- Blog Search JavaScript -->
+
+<script>
+
+document.addEventListener("DOMContentLoaded", function () {
+
+  const searchInput =
+    document.getElementById("blog-search");
+
+  const searchResults =
+    document.getElementById("search-results");
+
+
+  if (!searchInput || !searchResults) {
+    return;
+  }
+
+
+  let posts = [];
+
+
+  /*
+   * Load ALL blog posts
+   */
+
+  fetch("{{ '/search.json' | relative_url }}")
+
+    .then(function (response) {
+
+      if (!response.ok) {
+
+        throw new Error(
+          "Search index could not be loaded."
+        );
+
+      }
+
+      return response.json();
+
+    })
+
+
+    .then(function (data) {
+
+      posts = data;
+
+      console.log(
+        "Blog search loaded:",
+        posts.length,
+        "posts"
+      );
+
+    })
+
+
+    .catch(function (error) {
+
+      console.error(
+        "Blog search error:",
+        error
+      );
+
+    });
+
+
+  /*
+   * Search when user types
+   */
+
+  searchInput.addEventListener(
+    "input",
+    function () {
+
+      const query =
+        this.value
+          .toLowerCase()
+          .trim();
+
+
+      /*
+       * Empty search
+       */
+
+      if (!query) {
+
+        searchResults.innerHTML = "";
+
+        return;
+
+      }
+
+
+      /*
+       * Search title,
+       * description and content
+       */
+
+      const matches =
+        posts.filter(function (post) {
+
+          const text = (
+
+            (post.title || "") +
+            " " +
+            (post.description || "") +
+            " " +
+            (post.content || "")
+
+          ).toLowerCase();
+
+
+          return text.includes(query);
+
+        });
+
+
+      /*
+       * No results
+       */
+
+      if (matches.length === 0) {
+
+        searchResults.innerHTML =
+          '<p class="no-results">' +
+          'Nema rezultata za "' +
+          escapeHtml(query) +
+          '".' +
+          '</p>';
+
+        return;
+
+      }
+
+
+      /*
+       * Results count
+       */
+
+      let html =
+        '<p class="search-count">' +
+        'Pronađeno: ' +
+        matches.length +
+        '</p>';
+
+
+      /*
+       * Results
+       */
+
+      matches.forEach(function (post) {
+
+        html += `
+
+          <article class="search-result">
+
+            <h3>
+
+              <a href="${escapeHtml(post.url)}">
+                ${escapeHtml(post.title)}
+              </a>
+
+            </h3>
+
+            <p>
+              ${escapeHtml(
+                post.description || ""
+              )}
+            </p>
+
+          </article>
+
+        `;
+
+      });
+
+
+      searchResults.innerHTML = html;
+
+    }
+  );
+
+
+  /*
+   * Escape HTML
+   */
+
+  function escapeHtml(value) {
+
+    const div =
+      document.createElement("div");
+
+    div.textContent = value;
+
+    return div.innerHTML;
+
+  }
+
+
+});
+
+</script>
+
+{% endif %}
