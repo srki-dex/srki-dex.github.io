@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html data-bs-theme="light" lang="sr">
+
+<head>
+    <meta charset="utf-8">
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="stylesheet" id="silktide-consent-manager-css" href="https://cdn.jsdelivr.net/gh/silktide/consent-manager@v2.0.1/silktide-consent-manager.css" integrity="sha384-EdMq+R+YOnsbelo08wPenoTlnxbAyxI11NMIxzugx/qAsbh64KcOkqxYqq6pfvO/" crossorigin="anonymous">
+<style id="silktide-consent-manager-overrides">
+#stcm-wrapper {
+  --boxShadow: -5px 5px 10px 0px #00000012, 0px 0px 50px 0px #0000001a;
+  --fontFamily: Helvetica Neue, Segoe UI, Arial, sans-serif;
+  --primaryColor: #3B62E2;
+  --backgroundColor: #FFFFFF;
+  --textColor: #253B48;
+  --backdropBackgroundColor: #00000033;
+  --backdropBackgroundBlur: 0px;
+  --iconColor: #3B62E2;
+  --iconBackgroundColor: #FFFFFF;
+}
+</style>
+<script src="https://cdn.jsdelivr.net/gh/silktide/consent-manager@v2.0.1/silktide-consent-manager.js" integrity="sha384-5Pt34uiIbCsvfiiZXoLi4HRf/YBXjr9c8e+gYeVo9smUaInNHYVtc8NZ8wUnXJIq" crossorigin="anonymous"></script>
+<script>
+window.silktideConsentManager.init({
+  backdrop: {
+    show: true
+  },
+  icon: {
+    position: "bottomLeft"
+  },
+  prompt: {
+    position: "bottomRight"
+  },
+  consentTypes: [
+    {
+      id: "essential",
+      label: "Essential",
+      description: "<p>These cookies are necessary for the website to function properly and cannot be switched off. They help with things like logging in and setting your privacy preferences.</p>",
+      required: true,
+      onAccept: function() {
+        console.log('Add logic for the required Essential consent type here');
+      }
+    },
+    {
+      id: "analytics",
+      label: "Analytics",
+      description: "<p>These cookies help us improve the site by tracking which pages are most popular and how visitors move around the site.</p>",
+      defaultValue: true,
+      gtag: "analytics_storage"
+    },
+    {
+      id: "marketing",
+      label: "Marketing",
+      description: "<p>These cookies are used by us and our advertising partners to show you relevant ads on this site and elsewhere, and to measure how those campaigns perform.</p>",
+      gtag: [
+        "ad_storage",
+        "ad_user_data",
+        "ad_personalization"
+      ]
+    }
+  ],
+  text: {
+    prompt: {
+      description: "<p>We use cookies on our site to enhance your user experience, provide personalized content, and analyze our traffic.</p>",
+      acceptAllButtonText: "Accept all",
+      acceptAllButtonAccessibleLabel: "Accept all cookies",
+      rejectNonEssentialButtonText: "Reject non-essential",
+      rejectNonEssentialButtonAccessibleLabel: "Reject all non-essential cookies",
+      preferencesButtonText: "Preferences",
+      preferencesButtonAccessibleLabel: "Toggle preferences"
+    },
+    preferences: {
+      title: "Customize your cookie preferences",
+      description: "<p>We respect your right to privacy. You can choose not to allow some types of cookies. Your cookie preferences will apply across our website.</p>",
+      saveButtonText: "Save and close",
+      saveButtonAccessibleLabel: "Save your cookie preferences",
+      creditLinkText: "Get this banner for free",
+      creditLinkAccessibleLabel: "Get this banner for free"
+    }
+  }
+});
+</script>
+   <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-G779G4F3PD"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-G779G4F3PD');
+</script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Srki Dex: Web Dizajner Beograd | Izrada Web Sajtova i SEO</title>
+    <link rel="canonical" href="https://srki-dex.github.io/">
+    <meta property="og:url" content="https://srki-dex.github.io/">
+    <meta name="twitter:title" content="Srki Dex: Web Dizajner Beograd | Izrada Web Sajtova i SEO">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta property="og:type" content="website">
+    <meta name="twitter:description" content="Web dizajner iz Beograda. Izrada, održavanje i SEO optimizacija web sajtova, WordPress i One-Page sajtova i dodatne usluge print dizajna.">
+    <meta name="description" content="Web dizajner iz Beograda. Izrada, održavanje i SEO optimizacija One-Page i WordPress web sajtova i dodatne usluge print dizajna.">
+    <meta property="og:image" content="https://srki-dex.github.io/assets/img/srki-dex.webp">
+    <script type="application/ld+json">
+        {
+            "@context": "http://schema.org",
+            "@type": "WebSite",
+            "name": "Srki Dex: Web Dizajner Beograd | Izrada Web Sajtova i SEO",
+            "url": "https://srki-dex.github.io/"
+        }
+    </script>
+    <link rel="apple-touch-icon" type="image/png" sizes="180x180" href="assets/img/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicons/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="180x180" href="assets/img/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="assets/img/favicons/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="assets/img/favicons/android-chrome-512x512.png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sora:100,400&amp;display=swap">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
+    <link rel="stylesheet" href="assets/css/styles.min.css">
+<meta name="keywords" content="srki dex, srdjan cvetkovic, srdjan srki, srdjan srki dex,
+
+web dizajn Beograd, web dizajner Beograd, print dizajn Beograd, print dizajner Beograd,
+
+izrada sajta, izrda websajta, izrada wordpress, izrada one-page, izrada seo, ažuriranje sajta, ažuriranje websajta, optimizacija sajta, optimizacija sajta Beograd, seo optimizacija, wordpress seo optimizacija,
+
+websajt za organizaciju, websajt za pojedince, websajt za startape, websajt za klubove, websajt za firmu,
+
+print dizajn Beograd,
+dizajn tabela Beograd, dizajn flajera Beograd, dizajn rakslopa Beograd, dizajn vizit karti Beograd, dizajn cenovnika Beograd ">
+
+<meta name="author" content="Srki Dex - Web i Print Dizajner Frilenser Beograd, Srbija">
+<link rel="alternate" type="text/plain" href="/llms.txt" title="LLMs.txt">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": "https://srki-dex.github.io/#person",
+      "name": "Srdjan Cvetkovic",
+      "url": "https://srki-dex.github.io/",
+      "image": "https://srki-dex.github.io/assets/img/srki-dex.webp",
+      "jobTitle": "Web Designer",
+      "description": "Freelance web designer based in Belgrade, Serbia, specializing in website development, updates, and SEO optimization.",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Belgrade",
+        "addressCountry": "RS"
+      },
+      "sameAs": [
+        "https://www.instagram.com/srkidex",
+        "https://github.com/srki-dex",
+        "https://www.linkedin.com/in/srki-dex/"
+      ],
+      "knowsAbout": [
+        "Web Design",
+        "Print Design"
+      ],
+      "mainEntityOfPage": "https://srki-dex.github.io/"
+    },
+    {
+      "@type": "Brand",
+      "@id": "https://srki-dex.github.io/#brand",
+      "name": "Srki Dex",
+      "url": "https://srki-dex.github.io/",
+      "logo": "https://srki-dex.github.io/assets/img/srki-dex.webp"
+    }
+  ]
+}
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+<script>
+    emailjs.init({
+        publicKey: "hmX714hO3oFXl4QTB"
+    });
+</script>
+</head>
+
+<body>
+    <section style="background: #000000;">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg" style="background: rgb(0,0,0);height: 85px;">
+                <div class="container-fluid"><a class="navbar-brand" href="https://srki-dex.github.io"><img alt="srki dex logo" width="460" height="130" src="assets/img/srkidex.webp" style="background: rgba(0,0,0,0);border-radius: 0px;border-top-left-radius: 0;border-top-right-radius: 0;border-color: rgba(0,0,0,0);height: 50px;"></a><button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navcol"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon" style="background-image: url(&quot;data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='white' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e&quot;) !important;"></span></button>
+                    <div class="collapse navbar-collapse" id="navcol">
+                        <ul class="navbar-nav float-end ms-auto" style="padding-bottom: inherit;height: 82px;">
+                            <li class="nav-item dropdown" style="width: 130px;"><a class="dropdown-toggle nav-link text-center nav-link" data-bs-toggle="dropdown" aria-expanded="false" href="https://srki-dex.github.io" style="color: #ffffff;background: #226936;border: 3px solid #ffffff;border-radius: 10px;margin: 5px;width: 120px;height: 70px;"><i class="fas fa-globe"></i><br>Srki Dex</a>
+                                <div class="dropdown-menu" style="background: rgba(255,255,255,0);border-style: none;margin: 0px;"><a class="dropdown-item" href="#usluge" style="color: rgb(255,255,255);background: rgb(34,61,105);margin: 5px;margin-bottom: 10px;width: 120px;height: 70px;text-align: center;padding: 8px;border: 3px solid #ffffff;border-radius: 10px;"><i class="fas fa-suitcase"></i><br>#Usluge</a><a class="dropdown-item" href="#projekti" style="color: rgb(255,255,255);background: rgb(34,61,105);margin: 5px;margin-bottom: 10px;width: 120px;height: 70px;text-align: center;padding: 8px;border: 3px solid #ffffff;border-radius: 10px;"><i class="fas fa-images"></i><br>#Projekti</a><a class="dropdown-item" href="#o_meni" style="color: rgb(255,255,255);background: rgb(34,61,105);margin: 5px;width: 120px;height: 70px;text-align: center;padding: 8px;border: 3px solid #ffffff;border-radius: 10px;margin-bottom: 10px;"><i class="fas fa-user"></i><br>#O_meni</a><a class="dropdown-item" href="#kontakt" style="color: rgb(255,255,255);background: rgb(34,61,105);margin: 5px;margin-bottom: 10px;width: 120px;height: 70px;text-align: center;padding: 8px;border: 3px solid #ffffff;border-radius: 10px;"><i class="fas fa-mail-bulk"></i><br>#Kontakt</a></div>
+                            </li>
+                            <li class="nav-item" style="width: 130px;"><a class="nav-link text-center" href="blog/" style="color: #ffffff;background: #226936;border: 3px solid #ffffff;border-radius: 10px;margin: 5px;width: 120px;height: 70px;"><i class="fas fa-blog"></i><br>Blog</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </section>
+    <div class="col-xl-12 text-center d-flex d-sm-flex d-md-flex justify-content-center align-items-center justify-content-md-start align-items-md-center justify-content-xl-center mx-auto" id="web_dizajner" style="background: url(&quot;assets/img/bg/bg1.webp&quot;) center / cover no-repeat;">
+        <div class="header-top" style="background: rgba(0,0,0,0.39);"><img alt="srki dex srdjan cvetkovic" width="460" height="460" src="assets/img/srki-dex.webp" style="background: url(&quot;https://cdn.bootstrapstudio.io/placeholders/1400x800.png&quot;) center / cover no-repeat, rgba(0,0,0,0.52);margin-top: 40px;height: 360px;width: 360px;border-radius: 50%;box-shadow: 0px -5px 20px 5px;color: rgb(0, 0, 0);border: 10px solid #ffffff;">
+            <h1 style="text-align: center;color: rgb(255,255,255);font-size: 21px;padding: 4px;width: 305px;margin: 0 auto;margin-top: 10px;">Web Dizajner Beograd <br>| Izrada Web Sajtova i SEO |&nbsp;<br>Srki Dex</h1>
+            <p style="color: rgb(255,255,255);">&nbsp; Izrada, održavanje i SEO optimizacija web sajtova i print dizajn.</p>
+        </div>
+    </div>
+    <div class="container">
+        <h2 class="text-center" id="usluge" style="margin-top: 15px;box-shadow: 0px 0px 20px 5px rgb(0,0,0);">Usluge</h2>
+        <p style="text-align: center;">Frilenser Web Dizajner u Beogradu koji izrađuje moderne web One-Page sajtove, WordPress sajtove i radi SEO optimizaciju, uz dodatne usluge print dizajna.<br><br>Poseban fokus stavljam na kvalitetan korisnički interfejs, responsive dizajn, brzinu učitavanja, tehničku SEO optimizaciju i jasnu prezentaciju sadržaja. Web sajt treba da izgleda dobro, radi brzo i bude razumljiv korisnicima i pretraživačima.</p>
+        <div class="row">
+            <div class="col-sm-12 col-lg-6"><img alt="srki dex web dizajner" src="assets/img/landing/web-dizajn.webp" style="margin-top: 0;">
+                <h3 class="text-center" style="margin-top: 15px;box-shadow: 0px 0px 20px 5px rgb(0,0,0);">Web Dizajn</h3>
+                <p style="text-align: center;margin-top: 5px;">Izrada, Ažuriranje i Optimizacija One-Page ili Wordpress sajtova.<br>( za pojedince, za startape, za klubove, za firmu)<br><br>Izrada modernih, brzih i responsive web sajtova prilagođenim računarima, tabletima i mobilnim uređajima. Kreiram funkcionalne prezentacione i poslovne web sajtove sa fokusom na korisničko iskustvo, performanse i SEO optimizaciju. On-page SEO optimizacija web stranica, meta podataka, naslova, strukture sadržaja, schema.org podataka, internih linkova i tehničkih SEO elemenata sa ciljem bolje vidljivosti u pretrazi.</p>
+                <div class="float-start col-6"><img alt="srki dex web dizajner" src="assets/img/landing/Bootstrap.webp" style="/*border-radius: 5%;*/padding: 5px;">
+                    <h4 class="text-center" id="usluge-3" style="margin-top: 15px;">One-Page</h4>
+                    <p style="text-align: center;margin-top: 5px;">Bootstrap, HTML, CSS i JS web stranica.</p>
+                </div>
+                <div class="float-start col-6"><img alt="srki dex web dizajner" src="assets/img/landing/Wordpress.webp" style="/*border-radius: 5%;*/padding: 5px;">
+                    <h4 class="text-center" id="usluge-2" style="margin-top: 15px;">Wordpress </h4>
+                    <p style="text-align: center;margin-top: 5px;">PHP platforma za poslovne web sajtove.</p>
+                </div>
+            </div>
+            <div class="col-sm-12 col-lg-6"><img alt="srki dex print dizajner" src="assets/img/landing/print-dizajn.webp" style="margin-top: 0;">
+                <h3 class="text-center" style="margin-top: 15px;box-shadow: 0px 0px 20px 5px rgb(0,0,0);">Print Dizajn</h3>
+                <p style="text-align: center;margin-top: 5px;">Marketinški promotivni materijal i Logo Branding ambalaže.<br>(tabela, flajera,&nbsp;rakslopa,&nbsp;vizit karti, cenovnika i menija)<br><br>Print dizajn (dizajn za štampu) je grana grafičkog dizajna koja se bavi kreiranjem vizuelnih materijala namenjenih fizičkoj štampi na različitim podlogama, kao što su papir, platno, plastika ili karton. Za razliku od digitalnog dizajna koji se prikazuje na ekranima, print dizajn mora uzeti u obzir fizičke dimenzije, materijale i tehničke specifikacije štamparskih mašina. Najčešća primena:&nbsp;korporativni, promotivni materijal i ambalaža.</p>
+                <div class="float-start col-6"><img alt="srki dex print dizajner" src="assets/img/landing/AffinityStudio.webp" style="/*border-radius: 5%;*/padding: 5px;/*overflow: hidden;*/">
+                    <h4 class="text-center" id="usluge-5" style="margin-top: 15px;"><strong>Affinty</strong></h4>
+                    <p style="text-align: center;margin-top: 5px;">napredni Vektor, Piksel i Layout pregledi.</p>
+                </div>
+                <div class="float-start col-6"><img alt="srki dex print dizajner" src="assets/img/landing/canva_ai.webp" style="/*border-radius: 5%;*/padding: 5px;">
+                    <h4 class="text-center" id="usluge-6" style="margin-top: 15px;"><strong>Canva Ai</strong></h4>
+                    <p style="text-align: center;margin-top: 5px;">Ai Asistent namenjen grafičkim rešenjima.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <h2 class="text-center" id="projekti" style="margin-top: 15px;box-shadow: 0px 0px 20px 5px rgb(0,0,0);">Projekti</h2>
+        <p class="text-center" style="padding-right: 10%;padding-left: 10%;margin-bottom: 10px;">Pogledajte izbor mojih web, dizajn i programerskih projekata. Svaki projekat predstavlja priliku da spojim kreativnost, tehnologiju i praktična rešenja u funkcionalan i kvalitetan rezultat.</p>
+        <h3 style="text-align: center;margin-top: 15px;margin-bottom: 0px;">Web Dizajn</h3>
+        <section style="padding: 0px;height: auto;padding-top: 0px;">
+            <div class="container" style="padding: 0px;">
+                <div class="row gx-2 gy-2 row-cols-2 row-cols-sm-2 row-cols-md-2 row-cols-lg-4" style="width: auto;margin: 0px;">
+                    <div class="col" style="margin-top: 0px;"><a href="https://fitbar.rs/" target="_blank"><img class="img-fluid" alt="srki dex web" src="assets/img/radovi/sajt1.webp"></a>
+                        <p style="text-align: center;margin-top: 5px;margin-bottom: 0px;">fitbar.rs</p>
+                    </div>
+                    <div class="col" style="margin-top: 0px;"><a href="https://fitbar.co.ba/" target="_blank"><img class="img-fluid" alt="srki dex web" src="assets/img/radovi/sajt2.webp"></a>
+                        <p style="text-align: center;margin-top: 5px;margin-bottom: 0px;">fitbar.co.ba</p>
+                    </div>
+                    <div class="col" style="margin-top: 0px;"><a href="https://fitnes-klub.rs/" target="_blank"><img class="img-fluid" alt="srki dex web" src="assets/img/radovi/sajt3.webp"></a>
+                        <p style="text-align: center;margin-top: 5px;margin-bottom: 0px;">fitnes-klub.rs</p>
+                    </div>
+                    <div class="col" style="margin-top: 0px;"><a href="https://ciscenje-odnosenje.rs/" target="_blank"><img class="img-fluid" alt="srki dex web" src="assets/img/radovi/sajt4.webp"></a>
+                        <p style="text-align: center;margin-top: 5px;margin-bottom: 0px;">ciscenje-odnosenje.rs</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <h3 style="text-align: center;margin-top: 15px;margin-bottom: 5px;">Print Dizajn</h3>
+        <section style="padding: 0px;height: auto;padding-top: 0px;">
+            <div class="container">
+                <div class="row gx-2 gy-2 row-cols-2 row-cols-sm-2 row-cols-md-2 row-cols-lg-4" data-bss-baguettebox="">
+                    <div class="col" style="margin-top: 0px;"><a href="assets/img/radovi/print10.webp"><img class="img-fluid" alt="srki dex print" src="assets/img/radovi/print1.webp"></a>
+                        <p style="text-align: center;margin-top: 5px;margin-bottom: 0px;">FitBar rasklop</p>
+                    </div>
+                    <div class="col" style="margin-top: 0px;"><a href="assets/img/radovi/print20.webp"><img class="img-fluid" alt="srki dex print" src="assets/img/radovi/print2.webp"></a>
+                        <p style="text-align: center;margin-top: 5px;margin-bottom: 0px;">Eko tim Cile</p>
+                    </div>
+                    <div class="col" style="margin-top: 0px;"><a href="assets/img/radovi/print30.webp"><img class="img-fluid" alt="srki dex print" src="assets/img/radovi/print3.webp"></a>
+                        <p style="text-align: center;margin-top: 5px;margin-bottom: 0px;">A4Tech Bloody</p>
+                    </div>
+                    <div class="col" style="margin-top: 0px;"><a href="assets/img/radovi/print40.webp"><img class="img-fluid" alt="srki dex print" src="assets/img/radovi/print4.webp"></a>
+                        <p style="text-align: center;margin-top: 5px;margin-bottom: 0px;">Montech</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <h3 style="text-align: center;margin-top: 15px;margin-bottom: 5px;">Programiranje</h3>
+        <section style="padding: 0px;height: auto;padding-top: 0px;">
+            <div class="container">
+                <div class="row gx-2 gy-2 row-cols-2 row-cols-sm-2 row-cols-md-2 row-cols-lg-4" data-bss-baguettebox="">
+                    <div class="col" style="margin-top: 0px;"><a href="https://github.com/srki-dex/BS5-PHP-AJAX-form" target="_blank"><img class="img-fluid" alt="srki dex github" src="assets/img/radovi/github4.webp"></a>
+                        <p style="text-align: center;margin-top: 5px;margin-bottom: 0px;">BS5-PHP-AJAX</p>
+                    </div>
+                    <div class="col" style="margin-top: 0px;"><a href="https://github.com/srki-dex/POL-switcher" target="_blank"><img class="img-fluid" alt="srki dex github" src="assets/img/radovi/github1.webp"></a>
+                        <p style="text-align: center;margin-top: 5px;margin-bottom: 0px;">POL-switcher</p>
+                    </div>
+                    <div class="col" style="margin-top: 0px;"><a href="https://github.com/srki-dex/TFRS-data" target="_blank"><img class="img-fluid" alt="srki dex github" src="assets/img/radovi/github2.webp"></a>
+                        <p style="text-align: center;margin-top: 5px;margin-bottom: 0px;">Text Format RS</p>
+                    </div>
+                    <div class="col" style="margin-top: 0px;"><img class="img-fluid" alt="srki dex web design" src="assets/img/radovi/sajt0.webp">
+                        <p style="text-align: center;margin-top: 5px;margin-bottom: 0px;">Uskoro!</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <div class="container">
+        <h2 class="text-center" id="o_meni" style="margin-top: 10px;box-shadow: 0px 0px 20px 5px rgb(0,0,0);">O_meni</h2>
+        <p class="text-center" style="padding-right: 10%;padding-left: 10%;margin-bottom: 10px;">Zovem se Srđan Cvetković, bavim se izradom i optimizacijom modernih i responsive web stranica prilagođenih korisnicima i pretraživačima, osiguravajući da su funkcionalni, brzi i prilagođeni korisnicima. Moja strast je stvaranje unikatnog sadržaja, kako bi vaša reklama bude efikasna i uspešna.</p>
+        <p class="text-center" style="color: var(--bs-warning);background: #000000;padding-right: 10%;padding-left: 10%;margin-bottom: 5px;"> U svom radu koristim najstabilnije i dokazane tehnologije i biblioteke. Fokus je na kvalitetu izrade i korisničkom iskustvu sa ciljem da vaša prezentacija bude profesionalna i efektivna. </p>
+        <h3 class="text-center">Obrazovanje</h3>
+        <p class="text-center" style="padding-right: 10%;padding-left: 10%;margin-bottom: 5px;">Prvobitno obrazovanje sam stekao kroz kurseve web dizajna i tehnologija, dok IV SSS Ekonomskog smera mi omogućava da razumem bolje poslovne ciljeve. ("Dex" - Digital EXpert - Digitalni Ekspert, što odražava moju posvećenost pružanju vrhunskih digitalnih rešenja).</p>
+        <p class="text-center" style="margin-top: 15px;margin-bottom: 0px;">Sertifikati:</p>
+        <section style="padding-top: 19px;">
+            <div class="container">
+                <div class="row row-cols-2 row-cols-sm-2 row-cols-md-2 row-cols-lg-4" data-bss-baguettebox="" style="background: url(&quot;assets/img/bg/lines.webp&quot;), #2b3759;border-radius: 15px;margin-right: 0px;margin-left: 0px;">
+                    <div class="col" style="border: 2px solid rgb(255,255,255);"><a href="assets/img/radovi/SrđanC-Web.webp"><img class="img-fluid" alt="srki dex setifikati" src="assets/img/radovi/SrđanC-Web.min.webp" style="border-radius: 50%;margin: 0px 0px 0px;padding: 15px;">
+                            <p style="text-align: center;margin-top: 5px;margin-bottom: 0px;color: rgb(255,255,255);">Web Dizajner 2009.</p>
+                        </a></div>
+                    <div class="col" style="border: 2px solid rgb(255,255,255);"><a href="assets/img/radovi/SrđanC-JS.webp"><img class="img-fluid" alt="srki dex setifikati" src="assets/img/radovi/SrđanC-JS.min.webp" style="border-radius: 50%;margin: 0px 0px 0px;padding: 15px;">
+                            <p style="text-align: center;margin-top: 5px;margin-bottom: 0px;color: rgb(255,255,255);">JavaScript 2014.</p>
+                        </a></div>
+                    <div class="col" style="border: 2px solid rgb(255,255,255);"><a href="assets/img/radovi/SrđanC-Print.webp"><img class="img-fluid" alt="srki dex setifikati" src="assets/img/radovi/SrđanC-Print.min.webp" style="border-radius: 50%;margin: 0px 0px 0px;padding: 15px;">
+                            <p style="text-align: center;margin-top: 5px;margin-bottom: 0px;color: rgb(255,255,255);">Vektor grafika 2015.</p>
+                        </a></div>
+                    <div class="col" style="border: 2px solid rgb(255,255,255);"><a href="assets/img/radovi/SrđanC-SEO.webp"><img class="img-fluid" alt="srki dex setifikati" src="assets/img/radovi/SrđanC-SEO.min.webp" style="border-radius: 50%;margin: 0px 0px 0px;padding: 15px;">
+                            <p style="text-align: center;margin-top: 5px;margin-bottom: 0px;color: rgb(255,255,255);">S.E.O. 2018.</p>
+                        </a></div>
+                </div>
+            </div>
+            <p style="text-align: center;">sertifikati podlezu svakoj vristi provere uz JMBG u univerzitetu u Beogradu.</p>
+        </section>
+        <h3 class="text-center">Zašto ja?</h3>
+        <p class="text-center" style="padding-right: 10%;padding-left: 10%;margin-bottom: 5px;">Dobar dizajn nije samo lep izgled, a dobar web sajt nije samo nekoliko stranica i dugmadi. Verujem da kvalitetan projekat treba da spoji funkcionalnost, dobar dizajn, jasnoću, performanse i korisničko iskustvo.<br><br>Volim da razumem kako nešto funkcioniše, a ne samo kako izgleda. Zbog toga se prilikom rada trudim da svaki projekat posmatram iz više uglova: kako ga vidi korisnik, kako funkcioniše na različitim uređajima, kako ga pretraživači razumeju i kako se može dodatno unaprediti.<br><br>Bez obzira da li je u pitanju mali lični projekat, poslovni web sajt, grafički materijal ili kompleksniji digitalni projekat, trudim se da poslu pristupim odgovorno i detaljno. Važno mi je da razumem šta projekat treba da postigne, a ne samo šta bi trebalo da izgleda lepo.</p>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-12" style="margin-top: 15px;">
+                <p style="text-align: center;font-style: italic;"><span style="font-weight: bold;">Preporuka:</span><br>Snimanje, Aranžiranje i Proizvodnja preporuka&nbsp;Visual Artist&nbsp;<a href="https://www.instagram.com/dpavlasevic/" target="_blank">David Pavlašević</a></p>
+            </div>
+        </div>
+    </div>
+    <div class="container" style="background: url(&quot;assets/img/bg/bg4.webp&quot;) center / cover no-repeat;">
+        <h2 class="text-center" id="kontakt" style="/*filter: invert(100%);*/box-shadow: 0px 0px 20px 5px rgb(0,0,0);">Kontakt</h2>
+        <p class="text-center" style="padding-right: 10%;padding-left: 10%;margin-bottom: 10px;">Imate ideju za novi sajt, želite da unapredite postojeći projekat ili vam je potrebna pomoć oko dizajna, sadržaja i SEO optimizacije?&nbsp;Ne morate imati kompletno definisan projekat. Dovoljno je da objasnite šta želite da napravite, kakav problem želite da rešite ili šta želite da poboljšate. Zajedno možemo definisati najbolji pristup i potrebne korake.<br><br>Pošaljite poruku i započnimo razgovor o vašem projektu.&nbsp;Radujem se novim projektima, kreativnim idejama i zanimljivoj saradnji.</p>
+        <div class="row gx-2 gy-2 row-cols-1 row-cols-md-2" data-bss-baguettebox="">
+            <div class="col">
+                <div>
+                    <p class="text-center" style="text-align: center;">Društvene mreže na kojima sam prisutan:</p>
+                    <div><a class="float-start col-4" href="https://www.instagram.com/srkidex" target="_blank" style="text-align: center;margin: 0px;padding: 0px;"><img class="img-fluid" alt="srki dex instagram" width="32" height="32" src="assets/img/social/in.png" style="width: 30px;height: 30px;"><br>Instagram</a><a class="float-start col-4" href="https://www.linkedin.com/in/srki-dex/" target="_blank" style="text-align: center;margin: 0px;padding: 0px;"><img class="img-fluid" alt="srki dex linkedin" width="32" height="32" src="assets/img/social/ln.png" style="width: 30px;height: 30px;"><br>LinkedIn</a><a class="float-start col-4" href="https://github.com/srki-dex" target="_blank" style="text-align: center;margin: 0px;padding: 0px;"><img class="img-fluid" alt="srki dex github" width="32" height="32" src="assets/img/social/gh.png" style="width: 30px;height: 30px;filter: invert(100%);"><br>GitHub</a></div>
+                </div>
+            </div>
+            <div class="col">
+                <p style="text-align: center;">&nbsp;... a tu su i opcije podrške:</p>
+                <div class="float-start col-6"><a href="https://www.paypal.com/paypalme/srkidex" target="_blank"><img class="img-fluid" alt="srki dex paypal" src="assets/img/social/pp-donate.webp" style="padding-right: 15%;padding-left: 15%;"></a></div>
+                <div class="float-start col-6"><a href="https://buymeacoffee.com/srkidex" target="_blank"><img class="img-fluid" alt="srki dex buy me a coffee" src="assets/img/social/coffee-donate.webp" style="padding-right: 15%;padding-left: 15%;"></a></div>
+            </div>
+        </div>
+        <div class="row row-cols-1" data-bss-baguettebox="" style="width: auto;margin: 0px;">
+            <div class="col"><a href="assets/img/radovi/SrđanC-Web.webp"></a></div>
+            <div class="col" style="padding: 0px;padding-right: 0px;">
+                <section class="position-relative py-4">
+                    <p style="text-align: center;">klasična opcija Email-a:</p>
+                    <div class="container position-relative">
+                        <div class="row d-flex justify-content-center">
+                            <div class="col-12 col-md-12 col-lg-10 col-xl-5 col-xxl-4" style="width: 100%;height: 405px;margin: 0;padding: 0px;">
+                                <div class="card mb-5" style="padding-right: 8%;padding-left: 8%;border-style: none;height: auto;background: rgba(255,255,255,0);">
+                                    <div class="card-body" style="padding: 0px;">
+                                        <p id="result" style="text-align: center;"></p>
+                                        <form id="contact-form">
+                                            <div class="mb-3"><input class="form-control" type="text" id="name" name="name" placeholder="IME" required=""></div>
+                                            <div class="mb-3"><input class="form-control" type="email" id="email" name="email" placeholder="VАŠ MAIL" required=""></div>
+                                            <div class="mb-3"><input class="form-control" type="text" id="phone" name="phone" placeholder="06? TELEFON" required=""></div>
+                                            <div class="mb-3"><textarea class="form-control" id="message" name="message" rows="6" placeholder="TEKST PORUKE" required=""></textarea></div>
+                                            <div><button class="btn btn-primary w-100 d-block" id="submit-button" type="submit">Pošalji</button></div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+    <footer class="text-center bg-body" data-bs-theme="dark">
+        <p class="text-body mb-0" style="padding-top: 10px;">Srki Dex - Srđan Cvetković <br>Frilenser Web Dizajner<br>© srki-dex.github.io 2026.<br>Sva prava su zadržana.</p>
+    </footer><button id="topButton" class="back-to-top"><i class="fas fa-chevron-up"></i></button>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/script.min.js"></script>
+    <script src="assets/js/emailJS.min.js"></script>
+    <script src="assets/js/Lightbox-Gallery-baguetteBox.min.min.js"></script>
+    <script src="assets/js/Lightbox-Gallery.min.js"></script>
+</body>
+
+</html>

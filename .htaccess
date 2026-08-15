@@ -1,0 +1,9 @@
+# Caching schema - Čuva statične fajlove u browseru 24h
+<IfModule mod_expires.c>
+    <FilesMatch "\.(css|js|png|webp|gif|jpg|jpeg|ico)$">
+        Header set Cache-Control "public, max-age=86400"
+    </FilesMatch>
+</IfModule>
+
+# Force .xml files to serve as proper XML
+AddType application/xml .xml

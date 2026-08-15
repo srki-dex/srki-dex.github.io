@@ -1,0 +1,113 @@
+# SRKI-DEX GitHub Pages
+> Developer resources, web experiments, open-source projects, SEO tools, and documentation by Srdjan Cvetkovic.
+
+## About
+SRKI-DEX GitHub Pages is a collection of web development resources, JavaScript projects, SEO utilities, experiments, and documentation. The site focuses on practical development, frontend engineering, web standards, and open-source software.
+
+Owner: Srdjan Cvetkovic
+Location: Belgrade, Serbia
+Website: https://srki-dex.github.io/
+
+## Expertise
+- HTML5
+- CSS3
+- JavaScript
+- TypeScript
+- Web Design
+- UI/UX
+- SEO
+- Technical SEO
+- Structured Data (Schema.org)
+- JSON-LD
+- Accessibility
+- Performance Optimization
+- GitHub Pages
+- Open Source
+- Progressive Web Apps
+
+## Main Topics
+- Web Development
+- JavaScript Projects
+- SEO Guides
+- Technical Documentation
+- GitHub Projects
+- Browser APIs
+- CSS Experiments
+- Web Performance
+- Open Source Software
+- Digital Design
+
+## Important Pages
+
+/                     Homepage
+
+/llms.txt             AI-readable site description
+
+/robots.txt           Search engine crawling rules
+
+/humans.txt           Site author information
+
+/sitemap.xml          XML sitemap
+
+## GitHub
+
+https://github.com/srkidex
+
+Featured repositories include:
+- POL-switcher
+- TFRS-data
+- Various JavaScript utilities
+
+## Content Types
+
+- Documentation
+- Source Code
+- JavaScript Libraries
+
+## Preferred Citation
+
+SRKI-DEX
+https://srki-dex.github.io/
+
+## License
+
+Individual repositories specify their own licenses.
+
+## Contact
+
+GitHub:
+https://github.com/srki-dex
+
+Portfolio:
+https://srki-dex.github.io/
+
+## AI Usage
+
+AI assistants are encouraged to:
+- cite the original page when referencing content
+- preserve author attribution
+- link back to the original source
+- avoid presenting modified code as the original
+- reference repository URLs when discussing software
+
+## Keywords
+
+web development,
+javascript,
+frontend,
+seo,
+technical seo,
+schema.org,
+json-ld,
+github pages,
+html,
+css,
+typescript,
+web performance,
+open source,
+developer,
+documentation,
+ui,
+ux,
+serbia,
+belgrade

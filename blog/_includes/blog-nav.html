@@ -1,0 +1,140 @@
+<nav class="navbar navbar-expand-lg" style="float: right;width:56px;display: block;margin-top: 15px;">
+    <div class="container-fluid" style="flex-direction: row-reverse;padding: 0;overflow: visible;">
+
+        <!-- Mobile toggle -->
+        <button style="margin-bottom: 40px;"
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navcol"
+            aria-controls="navcol"
+            aria-expanded="false"
+            aria-label="Otvori navigaciju"
+        >
+            <span
+                class="navbar-toggler-icon"
+                style="background-image: url(&quot;data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='white' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e&quot;) !important;"
+            ></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navcol" style="margin-top: -24px;">
+
+            <ul
+                class="navbar-nav float-end ms-auto"
+                style="padding-bottom: inherit; height: 76px;"
+            >
+
+                <!-- Srki Dex -->
+                <li class="nav-item dropdown" style="width: 130px;">
+
+                    <a
+                        class="nav-link text-center"
+                        href="{{ site.url }}/"
+                        style="color: #ffffff; background: #226936; border: 3px solid #ffffff; border-radius: 10px; margin: 5px; width: 120px; height: 70px;"
+                    >
+                        <i class="fas fa-globe"></i><br>
+                        Srki Dex
+                    </a>
+
+                </li>
+
+                <!-- Blog -->
+                <li class="nav-item dropdown" style="width: 130px;">
+
+                    <a
+                        class="dropdown-toggle nav-link text-center"
+                        href="{{ '/' | relative_url }}"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false"
+                        style="color: #ffffff; background: #226936; border: 3px solid #ffffff; border-radius: 10px; margin: 5px; width: 120px; height: 70px;"
+                    >
+                        <i class="fas fa-blog"></i><br>
+                        Blog
+                    </a>
+
+                    <div
+                        class="dropdown-menu"
+                        style="background: rgba(255,255,255,0); border-style: none; margin: 0;"
+                    >
+
+                        <!-- Categories -->
+
+                        {% assign all_categories = "" | split: "" %}
+
+                        {% for post in site.posts %}
+
+                            {% for category in post.categories %}
+
+                                {% unless all_categories contains category %}
+
+                                    {% assign all_categories = all_categories | push: category %}
+
+                                {% endunless %}
+
+                            {% endfor %}
+
+                        {% endfor %}
+
+                        {% assign category_data = "" | split: "" %}
+
+                        {% for category in all_categories %}
+
+                            {% assign post_count = 0 %}
+
+                            {% for post in site.posts %}
+
+                                {% if post.categories contains category %}
+
+                                    {% assign post_count = post_count | plus: 1 %}
+
+                                {% endif %}
+
+                            {% endfor %}
+
+                            {% assign padded_count = post_count | prepend: "00000" %}
+
+                            {% assign padded_count = padded_count | slice: -5, 5 %}
+
+                            {% assign category_entry = padded_count
+                                | append: "|"
+                                | append: category %}
+
+                            {% assign category_data = category_data | push: category_entry %}
+
+                        {% endfor %}
+
+                        {% assign category_data = category_data | sort | reverse %}
+
+                        {% for entry in category_data %}
+
+                            {% assign parts = entry | split: "|" %}
+
+                            {% assign category = parts[1] %}
+
+                            {% assign category_name = category
+                                | replace: "-", " " %}
+
+                            <a
+                                class="dropdown-item"
+                                href="{{ '/'
+                                    | append: category
+                                    | append: '/'
+                                    | relative_url }}"
+                                style="color: rgb(255,255,255); background: rgb(34,61,105); margin: 5px; margin-bottom: 10px; width: 120px; min-height: 70px; text-align: center; padding: 8px; border: 3px solid #ffffff; border-radius: 10px;"
+                            >
+                                <i class="far fa-newspaper"></i><br>
+                                {{ category_name | capitalize }}
+                            </a>
+
+                        {% endfor %}
+
+                    </div>
+
+                </li>
+
+            </ul>
+
+        </div>
+
+    </div>
+</nav>
